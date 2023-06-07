@@ -1,0 +1,239 @@
+/* 초기화 */
+* {
+  margin:0; padding:0; box-sizing: border-box;
+}
+li {
+  list-style: none;
+  display: inline-block;
+}
+a {
+  text-decoration: none;
+}
+
+/* 공통부분 */
+.wrapper {
+  max-width: 1200px;
+  /* border: 1px solid yellow; */
+  margin: 0 auto;
+}
+
+/* 헤더 */
+header {
+  background:#f4f4f4;
+  position:fixed;
+  z-index: 9999;
+  width:100%;
+  border-bottom: 1px solid #ccc;
+}
+/* header #header_top {
+  border: 1px solid black;
+} */
+header #header_top #header_gnb ul {
+  /* border: 1px solid red; */
+  /* width: 600px; */
+  text-align: right;
+  padding-right: 5%;
+}
+header #header_top #header_gnb ul li {
+  padding: 4px 11px;
+}
+header #header_top #header_gnb ul li a {
+  color:#444;
+  font-size: 11pt;
+}
+header #header_bottom {
+  /* border: 1px solid black; */
+  margin-top: 20px;
+}
+header #header_bottom .wrapper {
+  display: flex;
+  justify-content: space-between;
+  
+}
+header #header_bottom #toggle {
+  display: none;
+}
+header #header_bottom #header_lnb ul li {
+  padding: 10px 30px;
+}
+header #header_bottom #header_lnb ul li a {
+  color:#111;
+  font-size: 14pt;
+  font-weight: bold;
+}
+header #header_bottom #phone {
+  display: none;
+}
+
+/* 콘텐츠 */
+#contents {
+  background:#000;
+  /* border: 1px solid red; */
+}
+#contents #mainimage_wrapper {
+  /* border: 1px solid green; */
+  background: #f4f4f4;
+  /* width: 1800px; */
+  width:1920px;
+  margin: 0 auto;
+  padding-top: 95px;
+}
+/* .slider {
+  border: 1px solid red;
+} */
+.slider .mainimage img{
+  /* border: 1px solid black; */
+  width: 100%;
+  text-align: center;
+}
+#contents #class_wrapper {
+  /* border: 1px solid black; */
+  background: #f4f4f4;
+  /* margin-top: 20px; */
+  padding-top: 20px;
+  /* margin-bottom: 20px; */
+}
+/* #class_wrapper #class_buttons label {
+  cursor: pointer;
+} */
+#contents #class_wrapper #class_tab {
+  margin: 0 auto;
+}
+/* 탭 메뉴 */
+/* 첫번째 탭 _ 모집중인 과정 */
+#contents #class_wrapper .wrapper input {
+  display: none;
+}
+#contents #class_wrapper .wrapper input ~ div {
+  display: none;
+}
+/* #contents #class_wrapper .wrapper input:nth-of-type(1):checked ~ div:nth-of-type(1) {display: block;}
+#contents #class_wrapper .wrapper input:nth-of-type(2):checked ~ div:nth-of-type(2) {display: block;}
+#contents #class_wrapper .wrapper input:nth-of-type(3):checked ~ div:nth-of-type(3) {display: block;}
+#contents #class_wrapper .wrapper input:nth-of-type(4):checked ~ div:nth-of-type(4) {display: block;}
+#contents #class_wrapper .wrapper input:nth-of-type(5):checked ~ div:nth-of-type(5) {display: block;}
+#contents #class_wrapper .wrapper input:nth-of-type(6):checked ~ div:nth-of-type(6) {display: block;} */
+
+#class_wrapper #class_tab input:nth-of-type(1):checked ~ div:nth-of-type(1) {display: block;}
+#class_wrapper #class_tab input:nth-of-type(2):checked ~ div:nth-of-type(2) {display: block;}
+#class_wrapper #class_tab input:nth-of-type(3):checked ~ div:nth-of-type(3) {display: block;}
+#class_wrapper #class_tab input:nth-of-type(4):checked ~ div:nth-of-type(4) {display: block;}
+#class_wrapper #class_tab input:nth-of-type(5):checked ~ div:nth-of-type(5) {display: block;}
+#class_wrapper #class_tab input:nth-of-type(6):checked ~ div:nth-of-type(6) {display: block;}
+
+/* 첫번째 탭 모양 구성 */
+#class_tab > section {overflow: hidden;}
+#class_tab > section > label {
+  /* 크기 및 글자 위치 지정 */
+  display: block; float: left;
+  width: 200px; height:50px;
+  border: 1px solid #ddd;
+  background: white;
+  text-align: center;
+  line-height: 50px;
+  color:#555; font-weight: bold;
+  border-right: none;
+}
+#class_tab > section > label:last-child {
+  border-right: 1px solid #ddd;
+}
+#class_tab input:nth-of-type(1):checked ~ section > label:nth-child(1) {
+  border-bottom: 4px solid #106aca; color : #106aca;}
+#class_tab input:nth-of-type(2):checked ~ section > label:nth-child(2) {
+  border-bottom: 4px solid #106aca; color : #106aca;}
+#class_tab input:nth-of-type(3):checked ~ section > label:nth-child(3) {
+  border-bottom: 4px solid #106aca; color : #106aca;}
+#class_tab input:nth-of-type(4):checked ~ section > label:nth-child(4) {
+  border-bottom: 4px solid #106aca; color : #106aca;}
+#class_tab input:nth-of-type(5):checked ~ section > label:nth-child(5) {
+  border-bottom: 4px solid #106aca; color : #106aca;}
+#class_tab input:nth-of-type(6):checked ~ section > label:nth-child(6) {
+  border-bottom: 4px solid #106aca; color : #106aca;}
+
+#class_tab .class_tab_item {
+  text-align: center;
+  width: 100%;
+  /* background: #f4f4f4; */
+}
+
+
+#contents #class_wrapper {
+  /* border: 1px solid blue; */
+  /* background: #f4f4f4; */
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+.class_tab_item .bxslider {
+  background: #f4f4f4;
+}
+/* 두번째 탭 _ 교육 과정 */
+#contents #edu_wrapper .wrapper input {
+  display: none;
+}
+#contents #edu_wrapper .wrapper input ~ div {
+  display: none;
+}
+#edu_wrapper #edu_tab input:nth-of-type(1):checked ~ div:nth-of-type(1) {display: block;}
+#edu_wrapper #edu_tab input:nth-of-type(2):checked ~ div:nth-of-type(2) {display: block;}
+
+/* 두번째 탭 모양 구성 */
+#edu_wrapper { background: #fff;}
+#edu_tab > section {overflow: hidden;}
+#edu_tab > section > label {
+  /* 크기 및 글자 위치 지정 */
+  display: block; float: left;
+  width: 50%; height:50px;
+  border: 1px solid #ddd;
+  background: white;
+  text-align: center;
+  line-height: 50px;
+  color:#555; font-weight: bold;
+  border-right: none;
+}
+#edu_tab > section > label:last-child {
+  border-right: 1px solid #ddd;
+}
+
+#edu_tab input:nth-of-type(1):checked ~ section > label:nth-child(1) {
+  border-bottom: 4px solid #106aca; color : #106aca;}
+#edu_tab input:nth-of-type(2):checked ~ section > label:nth-child(2) {
+  border-bottom: 4px solid #106aca; color : #106aca;}
+#edu_tab .edu_tab_item {
+  text-align: center;
+  width: 100%;
+  /* background: #fff; */
+}
+#edu_tab .edu_tab_item img {width:100%;}
+
+#edu_wrapper #edu_tab {
+  /* border: 1px solid blue; */
+  background: #fff;
+  padding-top: 20px;
+  margin-bottom: 30px;
+}
+#edu_wrapper #edu_tab section {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+/* 푸터 */
+footer {
+  background: #333;
+  color:white;
+  padding: 10px 0;
+}
+#footer_first, #footer_second, #sns {
+  padding: 10px 2%;
+}
+#footer_first {
+  border-bottom: 1px dashed #555;
+}
+#footer_second p {
+  font-size: 0.9em;
+  font-weight: lighter;
+  line-height: 1.7em;
+  color: #ccc;
+}
+#sns img {
+  width: 30px;
+}

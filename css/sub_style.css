@@ -1,0 +1,156 @@
+/* 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 공통부분 */
+.wrapper {
+    max-width: 1200px;
+    /* border: 1px solid yellow; */
+    margin: 0 auto;
+}
+
+/* 헤더 */
+header {
+    background: #f4f4f4;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+
+header #header_top #header_gnb ul {
+    /* border: 1px solid red; */
+    /* width: 600px; */
+    text-align: right;
+    padding-right: 5%;
+}
+
+header #header_top #header_gnb ul li {padding: 4px 11px;}
+header #header_top #header_gnb ul li a {color: #444;font-size: 11pt;}
+header #header_bottom {margin-top: 20px;}
+header #header_bottom .wrapper {display: flex;justify-content: space-between;}
+header #header_bottom #toggle {display: none;}
+header #header_bottom #header_lnb ul li {padding: 10px 30px;}
+header #header_bottom #header_lnb ul li a {color: #111;font-size: 14pt;font-weight: bold;}
+header #header_bottom #phone {display: none;}
+
+/* 콘텐츠 */
+#contents {background: #fff;padding-top: 120px;}
+#contents #class_wrapper {padding-top: 20px;margin-bottom: 20px;}
+#contents #class_wrapper #class_tab {margin: 0 auto;}
+
+/* 탭 메뉴 */
+/* 첫번째 탭 _ 모집중인 과정 */
+#contents #class_wrapper .wrapper input {display: none;}
+#contents #class_wrapper .wrapper input~div {display: none;}
+#class_wrapper #class_tab input:nth-of-type(1):checked~div:nth-of-type(1) {display: block;}
+#class_wrapper #class_tab input:nth-of-type(2):checked~div:nth-of-type(2) {display: block;}
+#class_wrapper #class_tab input:nth-of-type(3):checked~div:nth-of-type(3) {display: block;}
+#class_wrapper #class_tab input:nth-of-type(4):checked~div:nth-of-type(4) {display: block;}
+#class_wrapper #class_tab input:nth-of-type(5):checked~div:nth-of-type(5) {display: block;}
+#class_wrapper #class_tab input:nth-of-type(5):checked~div:nth-of-type(5) {display: block;}
+#class_wrapper #class_tab input:nth-of-type(6):checked~div:nth-of-type(6) {display: block;}
+#class_wrapper #class_tab input:nth-of-type(7):checked~div:nth-of-type(7) {display: block;}
+/* 첫번째 탭 모양 구성 */
+#class_tab>section {overflow: hidden;}
+#class_tab>section>label {
+    /* 크기 및 글자 위치 지정 */
+    display: block;
+    float: left;
+    width: 14.2855%;
+    height: 50px;
+    border: 1px solid #ddd;
+    background: white;
+    text-align: center;
+    line-height: 50px;
+    color: #555;
+    font-weight: bold;
+    border-right:0px;
+}
+#class_tab>section>label:last-child {
+    border: 1px solid #ddd;
+}
+
+#class_tab input:nth-of-type(1):checked~.class_buttons>label:nth-child(1) {background: #106aca; color:white;border:0px;}
+#class_tab input:nth-of-type(2):checked~.class_buttons>label:nth-child(2) {background: #106aca; color:white;border:0px;}
+#class_tab input:nth-of-type(3):checked~.class_buttons>label:nth-child(3) {background: #106aca; color:white;border:0px;}
+#class_tab input:nth-of-type(4):checked~.class_buttons>label:nth-child(4) {background: #106aca; color:white;border:0px;}
+#class_tab input:nth-of-type(5):checked~.class_buttons>label:nth-child(5) {background: #106aca; color:white;border:0px;}
+#class_tab input:nth-of-type(6):checked~.class_buttons>label:nth-child(6) {background: #106aca; color:white;border:0px;}
+#class_tab input:nth-of-type(7):checked~.class_buttons>label:nth-child(7) {background: #106aca; color:white;border:0px;}
+#class_tab input:nth-of-type(1):hover~.class_buttons>label:nth-child(1) {background: #60a2e8; color:white;border:0px;}
+#class_tab input:nth-of-type(2):hover~.class_buttons>label:nth-child(2) {background: #60a2e8; color:white;border:0px;}
+#class_tab input:nth-of-type(3):hover~.class_buttons>label:nth-child(3) {background: #60a2e8; color:white;border:0px;}
+#class_tab input:nth-of-type(4):hover~.class_buttons>label:nth-child(4) {background: #60a2e8; color:white;border:0px;}
+#class_tab input:nth-of-type(5):hover~.class_buttons>label:nth-child(5) {background: #60a2e8; color:white;border:0px;}
+#class_tab input:nth-of-type(6):hover~.class_buttons>label:nth-child(6) {background: #60a2e8; color:white;border:0px;}
+#class_tab input:nth-of-type(7):hover~.class_buttons>label:nth-child(7) {background: #60a2e8; color:white;border:0px;}
+#class_tab .class_tab_item {text-align: center; width: 100%;}
+#class_tab .class_tab_item img {width: 24.6%;}
+#contents #class_wrapper {padding-top: 20px;padding-bottom: 20px;}
+
+
+/* 첫번째 하위탭 _ 인사말 */
+#contents .introduce_tab_item #greeting_tab input {display: none;}
+#contents .introduce_tab_item #greeting_tab input~div {display: none;}
+.introduce_tab_item #greeting_tab input:nth-of-type(1):checked~div:nth-of-type(1) {display: block;}
+.introduce_tab_item #greeting_tab input:nth-of-type(2):checked~div:nth-of-type(2) {display: block;}
+.introduce_tab_item #greeting_tab input:nth-of-type(3):checked~div:nth-of-type(3) {display: block;}
+/* 첫번째 하위탭 _ 인사말 모양 구성 */
+.introduce_tab_item {background: #fff;}
+#greeting_tab>section {overflow: hidden;}
+#greeting_tab>section>label {
+    /* 크기 및 글자 위치 지정 */
+    display: block;
+    float: left;
+    width: 33.3%;
+    height: 50px;
+    border: 1px solid #ddd;
+    background: white;
+    text-align: center;
+    line-height: 50px;
+    color: #555;
+    font-weight: bold;
+    border-right:0px;
+}
+#greeting_tab>section>label:last-child {
+    border: 1px solid #ddd;
+}
+
+/* 인사말 메뉴 밑줄*/
+.introduce_tab_item #greeting_tab input:nth-of-type(1):checked~section>label:nth-child(1) {
+border-bottom: 4px solid #106aca; color: #106aca;}
+.introduce_tab_item #greeting_tab input:nth-of-type(2):checked~section>label:nth-child(2) {
+border-bottom: 4px solid #106aca; color: #106aca;}
+.introduce_tab_item #greeting_tab input:nth-of-type(3):checked~section>label:nth-child(3) {
+border-bottom: 4px solid #106aca; color: #106aca;}
+/* 인사말 호버시 색상변경 */
+.introduce_tab_item #greeting_tab input:nth-of-type(1):hover~section>label:nth-child(1) {
+    color: #9400d3;}
+.introduce_tab_item #greeting_tab input:nth-of-type(2):hover~section>label:nth-child(2) {
+    color: #9400d3;}
+.introduce_tab_item #greeting_tab input:nth-of-type(3):hover~section>label:nth-child(3) {
+    color: #9400d3;}
+#greeting_tab .greeting_buttons {text-align: center;}
+#greeting_tab .greeting_tab_item img {width: 100%; padding: 50px 0;}
+#greeting_tab {margin: 20px 0;}
+#contents #class_wrapper .introduce_tab_item h2 { padding: 100px 0 50px 0;margin: 0 auto;text-align: center;}
+#contents #class_wrapper.introduce_tab_item p { padding-bottom: 20px;}
+/* 푸터 */
+footer {background: #333;color: white;padding: 10px 0;}
+#footer_first, #footer_second, #sns {padding: 10px 2%;}
+#footer_first {border-bottom: 1px dashed #555;}
+#footer_second p {font-size: 0.9em;font-weight: lighter; color: #ccc;}
+#sns img {width: 30px;}
